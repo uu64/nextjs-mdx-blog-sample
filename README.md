@@ -1,6 +1,6 @@
-# nextjs-mdx-sample
+# nextjs-mdx-blog-sample
 
-Sample app using MDX with NextJS.
+Sample blog app using MDX with NextJS.
 
 ## Development
 
