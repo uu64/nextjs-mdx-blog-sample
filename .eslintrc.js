@@ -5,14 +5,11 @@ module.exports = {
     es6: true,
     node: true,
   },
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react", "prettier"],
+  plugins: ["react", "prettier"],
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "prettier",
-    "prettier/@typescript-eslint",
     "prettier/react",
   ],
   rules: {
@@ -25,4 +22,15 @@ module.exports = {
       version: "16.13",
     },
   },
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      parser: "@typescript-eslint/parser",
+      plugins: ["@typescript-eslint"],
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+      ],
+    },
+  ],
 };
