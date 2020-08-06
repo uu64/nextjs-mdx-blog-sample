@@ -5,7 +5,7 @@ import mdxUtil from "@/lib/mdx-util";
 
 interface Props {
   posts: {
-    resourcePath: string;
+    resourceId: string;
     date: string;
     title: string;
   }[];
@@ -22,7 +22,7 @@ const Index: React.FC<Props> = (props: Props) => {
             <li key={post.title}>
               <span>{post.date}</span>
               &nbsp;
-              <Link href="/[...id]" as={post.resourcePath}>
+              <Link href="/blog/[...id]" as={`/blog/${post.resourceId}`}>
                 <a>{post.title}</a>
               </Link>
             </li>
@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts: posts.map((post) => {
         return {
-          resourcePath: post.resourcePath,
+          resourceId: post.resourceId,
           date: post.frontMatter.date,
           title: post.frontMatter.title,
         };
