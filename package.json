@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sample blog app using MDX with NextJS.",
   "author": "uu64",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next",
